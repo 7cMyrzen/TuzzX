@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'A-Space';
+    src: url('fonts/a_space/A-Space\ Regular\ Demo.otf') format('truetype');
+
+}
+
+:root {
+    --bg-color: #010114;
+    --green-ts: rgb(0, 255, 38);
+    --purple-bc: rgba(144, 0, 255, 0.25);
+    --bg-white: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'A-Space', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body {
+    height: 100lvh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--bg-color);
+    /*background-image: radial-gradient(circle, #310455, #230b4b, #180e3f, #100c33, #0c0826, #090722, #06051d, #030419, #04061d, #050921, #040c25, #030e29);*/
+
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    nav {
+        height: 10lvh;
+        min-height: 10lvh;
+        width: 100vw;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0 5vw;
+        box-shadow: 0 0 0.5vw 0 rgb(10, 10, 66);
+
+        overflow: hidden;
+
+        .n {
+            width: calc(100vw / 3);
+            height: 100%;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        .name {
+            justify-content: flex-start;
+            padding-left: 2vw;
+            font-size: 2rem;
+            user-select: none;
+
+            text-shadow: 0 0 0.5vw var(--green-ts);
+        }
+
+        .links {
+            justify-content: space-around;
+            a {
+                text-decoration: none;
+                color: white;
+                padding-right: 1vw;
+                padding-left: 1vw;
+                font-size: 1.5rem;
+                transition: 1s ease;
+
+                &:hover {
+                    text-shadow: 0 0 0.5vw var(--green-ts);
+                }
+            }
+        }
+
+        .account {
+            justify-content: flex-end;
+            padding-right: 2vw;
+            
+            button {
+                height: auto;
+                width: auto;
+
+                font-size: 1.5rem;
+                
+                padding: 0.25vw 0.5vw;
+                background-color: transparent;
+                border: 0.1rem solid white;
+                border-radius: calc(0.5vw + 0.5vh);
+
+                transition: 1s ease;
+                cursor: pointer;
+
+                overflow: hidden;
+
+                &:hover {
+                    background-color: var(--purple-bc);
+                    text-shadow: 0 0 0.5vw var(--green-ts);
+                }
+            }
+
+            .profile {
+                height: 50%;
+                width: auto;
+                aspect-ratio: 1/1;
+
+                transition: 1s ease;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                    aspect-ratio: 1/1;
+
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    cursor: pointer;
+
+                    transition: 1s ease;
+
+                    &:hover {
+                        scale: 1.05;
+                        filter:drop-shadow(0 0 0.5vw white);
+                    }
+                }
+
+                .dropdown {
+                    position: absolute;
+                    z-index: 10;
+                    top: 8lvh;
+                    right: 7vw;
+
+                    height: auto;
+                    width: auto;
+
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-color: var(--bg-white);
+                    border-radius: 1vw;
+                    box-shadow: 0 0 1vw white;
+
+                    overflow: hidden;
+
+                    a {
+                        height: 3lvh;
+                        width: auto;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        padding: 0 1vw;
+
+                        text-decoration: none;
+                        color: black;
+                        font-size: 1rem;
+
+                        transition: 1s ease;
+
+                        &:hover {
+                            text-shadow: 0 0 0.2vw var(--green-ts);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        height: 85lvh;
+        width: 100vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 2vw;
+
+        overflow: hidden;
+
+        .invoice {
+            height: auto;
+            width: 40vw;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1vw;
+            margin: 1vw;
+
+            background-color: var(--bg-white);
+            border-radius: 1vw;
+
+            box-shadow: 0 0 1vw white;
+
+            overflow: hidden;
+
+            .invoice-header {
+                height: 10vh;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                overflow: hidden;
+
+                h1 {
+                    font-size: 2rem;
+                    color: black;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: black;
+                }
+
+            }
+
+            .invoice-details {
+                height: auto;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                overflow: hidden;
+
+                .invoice-ship {
+                    height: auto;
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    margin-top: 3lvh;
+
+                    overflow: hidden;
+
+                    h2 {
+                        font-size: 1.5rem;
+                        color: black;
+                    }
+
+                    hr {
+                        height: 0.1vw;
+                        width: 50%;
+
+                        background-color: black;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        color: black;
+                    }
+                }
+
+                .invoice-quantity {
+                    height: auto;
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    margin-top: 3lvh;
+
+                    overflow: hidden;
+
+                    h2 {
+                        font-size: 1.5rem;
+                        color: black;
+                    }
+
+                    hr {
+                        height: 0.1vw;
+                        width: 50%;
+
+                        background-color: black;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        color: black;
+                    }
+                }
+
+                .invoice-price {
+                    height: auto;
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    margin-top: 3lvh;
+
+                    overflow: hidden;
+
+                    h2 {
+                        font-size: 1.5rem;
+                        color: black;
+                    }
+
+                    hr {
+                        height: 0.1vw;
+                        width: 100%;
+
+                        background-color: black;
+                    }
+
+                    p {
+                        font-size: 2rem;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
