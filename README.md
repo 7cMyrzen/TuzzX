@@ -14,7 +14,7 @@ Ouvrir la page `localhost/tuzzx/`.
 ## Backend
 
 ### Ficher `index.php`:  
-Point d'entrée de toutes les requêtes redirigées via .htaccess  
+&nbsp;&nbsp;&nbsp;&nbsp;Point d'entrée de toutes les requêtes redirigées via .htaccess  
 
 ### Dossier `/app`(serveur):  
 &nbsp;&nbsp;&nbsp;&nbsp;`/models`: Partie M (MVC) avec les fonctionspour agir sur la base de donnée.  
