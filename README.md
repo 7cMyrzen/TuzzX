@@ -54,7 +54,7 @@ Quand on arrive sur le site une page d'accueil apparaît, de là on peut soit al
 |Utilisateur|Mot de passe|
 |---|---|
 |Tous les users de base| user |
-|Tous les admins de bases| user|
+|Tous les admins de bases| admin |
 |Sauf Tuzz L'Eblair avec |okok|
 
 Ensuite on peut aller vers la boutique, regarder les vaisseaux en ventes. Aller vers son profil, voir son panier et ses factures si il y en a. Ou encore aller dans l'onglet vente vendre son propre vaisseau (une fois mis en vente, il n'est pas sur la page de vente car un admin doit valider l'ajout depuis la page admin pour des raisons de modérations).
